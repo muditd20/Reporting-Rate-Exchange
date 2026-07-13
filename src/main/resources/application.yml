@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: purchase-transaction
+  datasource:
+    url: jdbc:mysql://localhost:3306/wex_db?useSSL=false&serverTimezone=UTC
+    username: <YOUR USER>
+    password: <YOUR PASSWORD>
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.MySQLDialect
+
+treasury:
+  api:
+    url: https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/od/rates_of_exchange

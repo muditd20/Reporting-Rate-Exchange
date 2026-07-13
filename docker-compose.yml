@@ -1,0 +1,16 @@
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: wex-mysql
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: wex_db
+      MYSQL_USER: <YOUR USER>
+      MYSQL_PASSWORD: <YOUR PASSWORD>
+    volumes:
+      - mysql-data:/var/lib/mysql
+
+volumes:
+  mysql-data:
